@@ -9,6 +9,11 @@
         <%= f.input :category, collection: Restaurant::CATEGORIES %>
         <%= f.submit class: 'btn btn-primary' %>
       <% end %>
+      <h2>New review</h2>
+        <%= simple_form_for [@restaurant, @review] do |f| %>
+          <%= f.input :content %>
+          <%= f.submit "Submit review", class: "btn btn-primary" %>
+        <% end %>
     </div>
   </div>
 </div>
